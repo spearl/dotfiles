@@ -43,6 +43,8 @@ brew install openssh
 brew install screen
 brew install php
 brew install gmp
+brew install gawk
+brew install jemalloc
 
 # Install font tools.
 brew tap bramstein/webfonttools
@@ -81,29 +83,41 @@ brew install rbenv
 brew install python
 brew install elixir
 brew install clojure
+brew install gnu-smalltalk
 brew install go
+brew install yaegi
 brew install protobuf
-
+brew tap dart-lang/dart
+brew install dart
 
 # Install other useful binaries.
 brew install bat
 brew install cowsay
-brwe install lolcat
+brew install lolcat
+brew install jq
 brew install exa
+brew install graphviz
 brew install ripgrep
 brew install fzf
 brew install git
 brew install git-lfs
-brew install imagemagick --with-webp
+brew install gnu-typist
+brew install hub
+brew install imagemagick
+brew install lazydocker
 brew install lua
-brew install lnyx
+brew install lynx
 brew install p7zip
 brew install pigz
+brew install postgres
 brew install pv
 brew install ssh-copy-id
+brew install tldr
 brew install tree
 brew install youtube-dl
 brew install zopfli
+
+# Install casks
 
 # Remove outdated versions from the cellar.
 brew cleanup
