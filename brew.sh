@@ -118,6 +118,12 @@ brew install youtube-dl
 brew install zopfli
 
 # Install casks
+brew cask install emacs
+brew cask install qlstephen
+brew cask install qlcolorcode
+brew cask install qlmarkdown
+brew cask install quicklook-json
+brew cask install qlimagesize
 
 # Remove outdated versions from the cellar.
 brew cleanup
