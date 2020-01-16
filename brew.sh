@@ -83,6 +83,7 @@ brew install rbenv
 brew install python
 brew install elixir
 brew install clojure
+brew install ghc
 brew install gnu-smalltalk
 brew install go
 brew install yaegi
