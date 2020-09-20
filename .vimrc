@@ -14,6 +14,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'morhetz/gruvbox'
 
 call vundle#end()
 filetype plugin indent on
