@@ -120,6 +120,7 @@ brew install zopfli
 
 # Install casks
 brew cask install emacs
+brew cask install adoptopenjdk
 brew cask install qlstephen
 brew cask install qlcolorcode
 brew cask install qlmarkdown
