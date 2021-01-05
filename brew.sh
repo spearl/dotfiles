@@ -44,6 +44,7 @@ brew install aircrack-ng bfg binutils binwalk cifer dex2jar dns2tcp fcrackzip fo
 brew install rbenv python elixir clojure ghc gnu-smalltalk go yaegi protobuf
 brew tap dart-lang/dart
 brew install dart
+brew install watchman
 
 # Install other useful binaries.
 brew install bat cowsay lolcat jq exa graphviz ripgrep fzf git git-lfs gnu-typist hub imagemagick lazydocker lua lynx p7zip pigz postgres pv ssh-copy-id tldr tree youtube-dl zopfli
