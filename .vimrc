@@ -1,67 +1,66 @@
-set nocompatible
-filetype off
+let mapleader = "'"
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'wincent/command-t'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/syntastic'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'morhetz/gruvbox'
-
-call vundle#end()
+syntax on " highlight syntax
 filetype plugin indent on
+"set number " show line numbers
+set noswapfile " disable the swapfile
+set hlsearch " highlight all results
+set ignorecase " ignore case in search
+set smartcase " case-sensitive if search contains an uppercase character
+set incsearch " show search results as you type
+set showcmd " show in progress commands
 
-set backspace=indent,eol,start
-set wildignore=*.swp,*.bak,*.pyc,*.class,node_modules
-
-syntax on
-set background=dark
-colorscheme gruvbox
-
-set autoread
-set nowrap
-set tabstop=2
+" Indent without hard tabs
+set expandtab " expand tabs to spaces
 set shiftwidth=2
-set expandtab
-set smartindent
-set relativenumber
-set autoindent
+set softtabstop=2
 
-set hlsearch
-set showmatch
-set hidden
-set history=500
+" reload vimrc
+nmap <Leader>s :source ~/.vimrc<CR>
 
-hi vertsplit ctermfg=238 ctermbg=235
-hi LineNr ctermfg=237
-hi StatusLine ctermfg=235 ctermbg=245
-hi StatusLineNC ctermfg=235 ctermbg=237
-hi Search ctermbg=58 ctermfg=15
-hi Default ctermfg=1
-hi clear SignColumn
-hi SignColumn ctermbg=235
-hi GitGutterAdd ctermbg=235 ctermfg=245
-hi GitGutterChange ctermbg=235 ctermfg=245
-hi GitGutterDelete ctermbg=235 ctermfg=245
-hi GitGutterChangeDelete ctermbg=235 ctermfg=245
-hi EndOfBuffer ctermfg=237 ctermbg=235
+" remove arrow keys in all modes
+nnoremap <Up> <nop>
+vnoremap <Up> <nop>
+inoremap <Up> <nop>
+nnoremap <Down> <nop>
+vnoremap <Down> <nop>
+inoremap <Down> <nop>
+nnoremap <Left> <nop>
+vnoremap <Left> <nop>
+inoremap <Left> <nop>
+nnoremap <Right> <nop>
+vnoremap <Right> <nop>
+inoremap <Right> <nop>
 
-set statusline=%=%P\ %f\ %m
-set fillchars=vert:\ ,stl:\ ,stlnc:\
-set laststatus=2
-set noshowmode
+" normal . in visual mode
+vnoremap . :norm.<CR>
 
-set termguicolors
+" maintain visual mode selection on indent
+vnoremap > >gv
+vnoremap < <gv
 
-map <leader>s :source ~/.vimrc<CR>
-inoremap kj <esc>
-inoremap jk <esc>
+" option-j/k to move lines up and down
+nnoremap ∆ :m .+1<CR>==
+nnoremap ˚ :m .-2<CR>==
+inoremap ∆ <Esc>:m .+1<CR>==gi
+inoremap ˚ <Esc>:m .-2<CR>==gi
+vnoremap ∆ :m '>+1<CR>gv=gv
+vnoremap ˚ :m '<-2<CR>gv=gv
 
+" insert mode emacs keybindings
+inoremap <C-e> <Esc>A
+inoremap <C-a> <Esc>I
+
+" insert mode line cursor, else block cursor
+" let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+" let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+" let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
+" html
+"autocmd BufRead,BufNewFile *.htm,*.html,*.css setlocal tabstop=2 shiftwidth=2 softtabstop=2
+"
+
+" set colorscheme
+colorscheme nord
