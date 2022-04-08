@@ -38,7 +38,7 @@ brew tap bramstein/webfonttools
 brew install sfnt2woff sfnt2woff-zopfli woff2
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
-brew install aircrack-ng bfg binutils binwalk cifer dex2jar dns2tcp fcrackzip foremost hashpump hydra john knock netpbm nmap pngcheck socat sqlmap tcpflow tcpreplay tcptrace ucspi-tcp xpdf xz
+#brew install aircrack-ng bfg binutils binwalk cifer dex2jar dns2tcp fcrackzip foremost hashpump hydra john knock netpbm nmap pngcheck socat sqlmap tcpflow tcpreplay tcptrace ucspi-tcp xpdf xz
 
 # Install Languages
 brew install rbenv python elixir clojure ghc gnu-smalltalk go yaegi protobuf
